@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  background-color: #1E1E1E;
 }
 *, *:before, *:after {
   box-sizing: inherit;

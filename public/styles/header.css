@@ -1,0 +1,37 @@
+header {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url("../images/black-orchid.png"); */
+  background-image: url("../images/classy-fabric.png");
+  background-color: #343434;
+
+}
+
+.user-content {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  
+}
+
+.user-content--logo {
+  width: 7em;
+  margin-bottom: -2em;
+}
+
+.user-content--logo img {
+  width: 100%; /* Make the image fill the width of the parent div */
+  height: 100%; /* Make the image fill the height of the parent div */
+  object-fit: cover; /* Adjust how the image fits within the parent div */
+}
+
+p {
+  font-size: 1.2em;
+}
