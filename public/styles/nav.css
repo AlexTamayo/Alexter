@@ -1,0 +1,37 @@
+.navigation-bar {
+  display: flex;
+  color: white;
+  background-color: #cc0000;
+  height: 120px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+
+}
+
+#logo-txt {
+  display: flex;
+  font-size: 1.5em;
+  font-family: 'Bungee', cursive, sans-serif;
+  margin-left: 1.5em;
+  margin-top: auto;
+  margin-bottom: 1em;
+  align-items: center;
+}
+
+#new-tweet {
+  display: flex;
+  font-size: 0.9em;
+  margin-left: auto;
+  margin-right: 1.5em;
+  margin-top: auto;
+  margin-bottom: 0.8em;
+  flex-direction: column;
+}
+
+.fa-solid {
+  display: flex;
+  margin-top: 0.1em;
+  justify-content: center;
+}
