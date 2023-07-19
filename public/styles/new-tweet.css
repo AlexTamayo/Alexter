@@ -1,0 +1,70 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 92%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+#tweet-text {
+  resize: none;
+  outline: none;
+  align-content: center;
+  color: white;
+  font-size: x-large;
+  background-color: transparent;
+  overflow: hidden;
+  height: 2em;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+/* #tweet-text::placeholder,
+::-webkit-input-placeholder {
+  text-align: center;
+  vertical-align: text-bottom;
+} */
+
+.post-info {
+  display: flex;
+  font-family: 'Bungee', cursive, sans-serif;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  margin-top: 0.5em;
+  align-items: center;
+}
+
+.counter {
+  margin-right: 0.7em;
+}
+
+.button {
+  color: white;
+  border: none;
+  /* font-size: 0.7em; */
+  /* padding: 0.8em; */
+  background-color: #C00;
+  opacity: 75%;
+  height: 2em;
+  width: 4.5em;
+  border-radius: 5%;
+}
+
+.button span {
+  display: flex;
+  font-size: 0.8em;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.button:hover span{
+  font-size: 0.9em;
+  transition: 0.3s;
+}

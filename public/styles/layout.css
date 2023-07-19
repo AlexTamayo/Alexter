@@ -5,7 +5,8 @@
  */
 html {
   box-sizing: border-box;
-  background-color: #1E1E1E;
+  /* background-color: #1E1E1E; */
+  background-color: #222;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -16,9 +17,12 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #eee;
+  /* background-color: #f4f1ec; */
+  background-color: #333;
   font-family: 'Source Sans 3', sans-serif;
+  justify-content: center;
+  align-content: center;
   font-size: 24px;
 }
 
@@ -27,3 +31,12 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  margin: auto;
+  background-color: #444;
+
+ }
