@@ -21,12 +21,6 @@ form {
   border-bottom: 2px solid white;
 }
 
-/* #tweet-text::placeholder,
-::-webkit-input-placeholder {
-  text-align: center;
-  vertical-align: text-bottom;
-} */
-
 .post-info {
   display: flex;
   font-family: 'Bungee', cursive, sans-serif;
@@ -37,14 +31,27 @@ form {
 }
 
 .counter {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white;
   margin-right: 0.7em;
+  opacity: 10%;
+}
+
+.warning-counter {
+  color: #9f1;
+  opacity: 40%;
+}
+
+
+.excess-counter {
+  color: #6ff;
+  opacity: 80%;
 }
 
 .button {
   color: white;
   border: none;
-  /* font-size: 0.7em; */
-  /* padding: 0.8em; */
   background-color: #C00;
   opacity: 75%;
   height: 2em;
