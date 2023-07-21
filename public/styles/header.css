@@ -66,6 +66,7 @@
     float: left;
     height: 400px;
     width: 400px;
+    min-width: 300px;
     margin: auto;
     margin-top: 7em;
     margin-left: 3em;
