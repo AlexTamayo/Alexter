@@ -2,9 +2,9 @@ form {
   display: flex;
   flex-direction: column;
   align-content: center;
-  width: 92%;
+  width: 98%;
   margin: auto;
-  margin-top: 1em;
+  margin-top: 2.5em;
   margin-bottom: 0.5em;
 }
 
@@ -36,6 +36,8 @@ form {
   color: white;
   margin-right: 0.7em;
   opacity: 10%;
+  caret-color: transparent;
+  user-select: none;
 }
 
 .warning-counter {
@@ -57,6 +59,8 @@ form {
   height: 1.6em;
   width: 4em;
   border-radius: 5%;
+  caret-color: transparent;
+  user-select: none;
 }
 
 .button span {

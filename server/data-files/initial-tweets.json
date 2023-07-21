@@ -8,7 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1689739722069
+    "created_at": 1689671484583
   },
   {
     "user": {
@@ -19,6 +19,17 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1689826122069
+    "created_at": 1689757884583
+  },
+  {
+    "user": {
+      "name": "Alex Tamayo ✅",
+      "avatars": "../../images/profile_at_hex.png",
+      "handle": "@AlexTamayo"
+    },
+    "content": {
+      "text": "This is my Tweeter project for Ligthhouse Labs, Alexter 😆 I'm making it look more like actual Twitter rather than the samples I was given. Pretty please don't fail me for not colouring within the lines. I can't help myself."
+    },
+    "created_at": 1689844284583
   }
 ]

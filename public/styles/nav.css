@@ -8,7 +8,8 @@
   width: 100%;
   position: fixed;
   z-index: 9999;
-  /* order: -1; */
+  caret-color: transparent;
+  user-select: none;
 
 }
 

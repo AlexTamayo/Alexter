@@ -7,6 +7,17 @@
 
 // Alternate way of writing the same thing is:  `$( () => { } )`
 $(document).ready(() => {
+
+  // console.log(timeago.format(1689738894410));
+
+  const tFormat = timeago.format;
+
+  const escapeHtml = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = (tweet) => {
 
     const $tweet = $(`
@@ -28,13 +39,15 @@ $(document).ready(() => {
               <span>·</span>
             </div>
             <div class="tweet-header date">
-              <span>${tweet.created_at}</span>
+              <span">${tFormat(tweet.created_at)}</span>
             </div>
           </header>
           <div class="tweet-text">
-            <span>
-              ${tweet.content.text}
-            </span>
+            <div>
+              <span>
+                ${escapeHtml(tweet.content.text)}
+              </span>
+            </div>
           </div>
           <footer class="tweet-footer">
             <div class="tweet-footer-reply">
@@ -104,12 +117,27 @@ $(document).ready(() => {
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
     const formData = $(this).serialize();
+    const tweetText = formData.substring(5).trim();
+
+    if (tweetText.length === 0) {
+      alert('Form data is empty.');
+      return;
+    }
+    
+    if (tweetText.length > 140) {
+      alert('Exceeded maximum message length.');
+      return;
+    }
+
+    console.log(formData);
+    
     $.ajax({
       method: 'POST',
       url: '/tweets',
       data: formData,
       success: () => {
         loadTweets();
+        $('#tweet-text').val('');
       },
       error: () => {}
     })

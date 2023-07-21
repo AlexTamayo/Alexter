@@ -8,6 +8,7 @@
   background-image: url("../images/classy-fabric.png");
   background-color: #222;
 
+
 }
 
 .user-content {
@@ -24,6 +25,8 @@
 .user-content--logo {
   width: 7em;
   margin-bottom: -2em;
+  caret-color: transparent;
+  user-select: none;
 }
 
 .user-content--logo img {
