@@ -2,13 +2,15 @@
   display: flex;
   height: 400px;
   width: 100%;
-  align-items: center;
-  justify-content: center;
-  /* background-image: url("../images/black-orchid.png"); */
   background-image: url("../images/classy-fabric.png");
-  background-color: #222;
+  background-color: #400;
+}
 
-
+.user-profile-header-container {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  margin: auto;
 }
 
 .user-content {
@@ -16,25 +18,76 @@
   color: white;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   position: relative;
-  margin-bottom: -8em;
+  margin: auto;
+  margin-left: -1em;
+  margin-bottom: 1em;
   
 }
 
-.user-content--logo {
-  width: 7em;
+.user-content-logo {
+  display: flex;
+  width: 60%;
+  height: 60%;
+  min-width: 139px;
+  min-height: 139px;
   margin-bottom: -2em;
+  justify-content: center;
+  align-items: center;
   caret-color: transparent;
   user-select: none;
 }
 
-.user-content--logo img {
-  width: 100%;
-  height: 100%;
+.user-content-logo img {
+  width: 90%;
+  height: 90%;
   object-fit: cover;
 }
 
-p {
+.user-content-name {
+  margin-top: 0.5em;
+}
+
+.user-content-name p {
   font-size: 1.2em;
+}
+
+.user-content-handle {
+  margin-top: -1.1em;
+  margin-left: -0.6em;
+  font-size: 1em;
+  opacity: 50%;
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .user-profile-header {
+    /* position: relative; */
+    float: left;
+    /* width: 33.3%; */
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    margin-top: 7em;
+    margin-left: 3em;
+    margin-right: 2em;
+    transition: 0.2s;
+  }
+
+  .user-profile-header-container {
+    /* display: flex; */
+    width: 100%;
+    /* height: 100%; */
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    transition: 0.2s;
+    
+  }
+  .user-content {
+    margin-left: auto;
+    margin-bottom: auto;
+    transition: 0.2s;
+  }
 }

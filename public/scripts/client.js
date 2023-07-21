@@ -118,7 +118,7 @@ $(document).ready(() => {
     const tweetText = formData.substring(5).trim();
 
     if (tweetText.length === 0) {
-      errorMessage('You typed nothing...');
+      errorMessage('No tweet, you typed nothing...');
       return;
     }
     

@@ -10,8 +10,11 @@
     type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3&family=Open+Sans:wght@300;600&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3&family=Open+Sans:wght@300;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -24,9 +27,11 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  
+
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -39,41 +44,50 @@
     <span id="logo-txt">alexter</span>
     <div id="new-tweet">
       <span><strong>Write</strong>&nbsp;a new tweet</span>
-      <i class="fa-solid fa-angles-down"></i>
+      <span id="arrows">
+        <i class="fa-solid fa-angles-down"></i>
+      </span>
     </div>
   </nav>
-  <!-- Header -->
-  <header class="user-profile-header">
-    <div class="user-content">
-      <div class="user-content user-content--logo">
-        <img src="/images/profile_at_hex.png">
-      </div>
-      <br>
-      <div>
-        <p><strong>Alex</strong>&nbsp;Tamayo</p>
-      </div>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <!-- New tweet section -->
-    <section class="new-tweet">
-      <div id="error" class="error-message invisible-error">
-        <span></span>
-      </div>
-      <form id="tweet-form" action="/tweets" method="POST">
-        <textarea name="text" id="tweet-text" placeholder="Whatchu talking bout, Willis?"></textarea>
-        <div class="post-info">
-          <button type="submit" class="button"><span>Tweet</span></button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+  <div id="big-body-container">
+    <!-- Header -->
+    <header class="user-profile-header">
+      <div class="user-profile-header-container">
+        <div class="user-content">
+          <div class="user-content-logo">
+            <img src="/images/profile_at_hex.png">
+          </div>
+          <br>
+          <div class="user-content-name">
+            <p><strong>Alex</strong>&nbsp;Tamayo</p>
+          </div>
+          <div class="user-content-handle">
+            <span>@AlexTamayo</span>
+          </div>
         </div>
-      </form>
-    </section>
-    <!-- Tweets container -->
-    <div id="tweets-container">
+      </div>
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main id="main-container">
+      <!-- New tweet section -->
+      <section class="new-tweet">
+        <div id="error" class="error-message invisible-error">
+          <span></span>
+        </div>
+        <form id="tweet-form" action="/tweets" method="POST">
+          <textarea name="text" id="tweet-text" placeholder="Whatchu talking bout, Willis?"></textarea>
+          <div class="post-info">
+            <button type="submit" class="button"><span>Tweet</span></button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <!-- Tweets container -->
+      <div id="tweets-container">
+      </div>
+      <hr class="hr-bottom">
+    </main>
   </div>
-    <hr class="hr-bottom">
-  </main>
 </body>
 
 </html>

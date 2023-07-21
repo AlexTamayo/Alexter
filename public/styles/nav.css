@@ -2,7 +2,7 @@
   display: flex;
   color: white;
   background-color: #cc0000;
-  height: 120px;
+  height: 90px;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,7 +10,13 @@
   z-index: 9999;
   caret-color: transparent;
   user-select: none;
+}
 
+@media only screen and (max-width: 1024px) {
+  .navigation-bar {
+    background-color: transparent;
+    transition: 0.2s;
+  }
 }
 
 #logo-txt {

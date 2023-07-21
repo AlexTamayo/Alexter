@@ -2,12 +2,12 @@ $(document).ready(function() {
   // --- our code goes here ---
   const textarea = document.getElementById('tweet-text');
 
+
+  // Text box size adjustment
   const adjustTextareaHeight = () => {
     textarea.style.height = 'auto';
     textarea.style.height = `${textarea.scrollHeight}px`;
   };
-
-  adjustTextareaHeight()
 
 
   $("textarea").on("keyup", function () {

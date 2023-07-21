@@ -34,7 +34,8 @@ hr {
   width: 8%;
   justify-content: center;
   align-items: flex-start;
-  margin-right: 0.25em;
+  margin-right: 11px;
+  min-width: 59px;
   caret-color: transparent;
   user-select: none;
 
@@ -48,6 +49,7 @@ hr {
 .tweet-container-main {
   display: flex;
   flex-direction: column;
+  margin-left: 11px;
   width: 90%;
   
 }
