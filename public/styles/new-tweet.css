@@ -4,7 +4,7 @@ form {
   align-content: center;
   width: 98%;
   margin: auto;
-  margin-top: 2.5em;
+  margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
@@ -16,9 +16,11 @@ form {
   font-size: x-large;
   background-color: transparent;
   overflow: hidden;
-  height: 2em;
   border: none;
   border-bottom: 2px solid white;
+  overflow: hidden;
+  transition: height 0.3s;
+  min-height: 3em;
 }
 
 .post-info {
@@ -78,4 +80,26 @@ form {
 .button:hover span{
   font-size: 0.9em;
   transition: 0.3s;
+}
+
+.error-message {
+  margin-top: 0.5em;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red ;
+  border-radius: 15px;
+  opacity: 70%;
+  color: red;
+  height: 1.8em;
+  /* font-size: ; */
+  display:none;
+
+}
+
+.visible-error {
+  display: flex;
+}
+
+.invisible-error {
+  display:none;
 }

@@ -42,6 +42,7 @@
       <i class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
+  <!-- Header -->
   <header class="user-profile-header">
     <div class="user-content">
       <div class="user-content user-content--logo">
@@ -55,7 +56,11 @@
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <!-- New tweet section -->
     <section class="new-tweet">
+      <div id="error" class="error-message invisible-error">
+        <span></span>
+      </div>
       <form id="tweet-form" action="/tweets" method="POST">
         <textarea name="text" id="tweet-text" placeholder="Whatchu talking bout, Willis?"></textarea>
         <div class="post-info">
@@ -64,6 +69,7 @@
         </div>
       </form>
     </section>
+    <!-- Tweets container -->
     <div id="tweets-container">
   </div>
     <hr class="hr-bottom">

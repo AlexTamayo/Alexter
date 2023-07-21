@@ -8,11 +8,9 @@
 // Alternate way of writing the same thing is:  `$( () => { } )`
 $(document).ready(() => {
 
-  // console.log(timeago.format(1689738894410));
-
   const tFormat = timeago.format;
 
-  const escapeHtml = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -45,7 +43,7 @@ $(document).ready(() => {
           <div class="tweet-text">
             <div>
               <span>
-                ${escapeHtml(tweet.content.text)}
+                ${escape(tweet.content.text)}
               </span>
             </div>
           </div>
@@ -81,24 +79,6 @@ $(document).ready(() => {
     }
   };
 
-
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const tweetsData = [
-    {
-      "user": {
-        "name": "Alex Tamayo",
-        "avatars": "/images/profile_at_hex.png",
-        "handle": "@AlexTamayo"
-      },
-      "content": {
-        "text": "This is my tweeter project for Lighthouse labs. I'm making it look more like actual Twitter than the samples I was given. Pretty please don't fail me. I can't help myself."
-      },
-      "created_at": "19 July 2023"
-    }
-  ]
-
-  // renderTweets(tweetsData);
-
   const loadTweets = () => {
 
     $.ajax({
@@ -111,8 +91,26 @@ $(document).ready(() => {
 
   };
 
-  loadTweets();
+  const errorMessage = function(message){
+    const $error = $('#error');
 
+    $error.text(message);
+    
+    $error.removeClass('invisible-error');
+    $error.addClass('visible-error');
+    $error.slideDown(500);
+    
+    setTimeout(() => { 
+      $error.slideUp(500, () => {
+        $error.removeClass('visible-error');
+        $error.addClass('invisible-error');
+        $error.text('');
+      });
+    }, 3000);
+    
+  }
+
+  loadTweets();
 
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
@@ -120,12 +118,12 @@ $(document).ready(() => {
     const tweetText = formData.substring(5).trim();
 
     if (tweetText.length === 0) {
-      alert('Form data is empty.');
+      errorMessage('You typed nothing...');
       return;
     }
     
     if (tweetText.length > 140) {
-      alert('Exceeded maximum message length.');
+      errorMessage('You exceeded maximum message length!');
       return;
     }
 
@@ -144,3 +142,35 @@ $(document).ready(() => {
   });
 
 })
+
+
+/*
+
+Can you modify the one I've got, please?
+
+HTML:
+<form id="tweet-form" action="/tweets" method="POST">
+  <textarea name="text" id="tweet-text" placeholder="Whatchu talking bout, Willis?"></textarea>
+  <div class="post-info">
+    <button type="submit" class="button"><span>Tweet</span></button>
+    <output name="counter" class="counter" for="tweet-text">140</output>
+  </div>
+</form>
+
+CSS:
+#tweet-text {
+  resize: none;
+  outline: none;
+  align-content: center;
+  color: white;
+  font-size: x-large;
+  background-color: transparent;
+  overflow: hidden;
+  height: 2em;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+
+
+*/
