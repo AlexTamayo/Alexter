@@ -142,35 +142,3 @@ $(document).ready(() => {
   });
 
 })
-
-
-/*
-
-Can you modify the one I've got, please?
-
-HTML:
-<form id="tweet-form" action="/tweets" method="POST">
-  <textarea name="text" id="tweet-text" placeholder="Whatchu talking bout, Willis?"></textarea>
-  <div class="post-info">
-    <button type="submit" class="button"><span>Tweet</span></button>
-    <output name="counter" class="counter" for="tweet-text">140</output>
-  </div>
-</form>
-
-CSS:
-#tweet-text {
-  resize: none;
-  outline: none;
-  align-content: center;
-  color: white;
-  font-size: x-large;
-  background-color: transparent;
-  overflow: hidden;
-  height: 2em;
-  border: none;
-  border-bottom: 2px solid white;
-}
-
-
-
-*/
