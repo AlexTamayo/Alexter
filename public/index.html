@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3&family=Open+Sans:wght@300;600&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3&family=Open+Sans:wght@300;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script> 
-  </head>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav class="navigation-bar">
-      <span id="logo-txt">alexter</span>
-      <div id="new-tweet">
-        <span><strong>Write</strong>&nbsp;a new tweet</span>
-        <i class="fa-solid fa-angles-down"></i>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav class="navigation-bar">
+    <span id="logo-txt">alexter</span>
+    <div id="new-tweet">
+      <span><strong>Write</strong>&nbsp;a new tweet</span>
+      <i class="fa-solid fa-angles-down"></i>
+    </div>
+  </nav>
+  <header class="user-profile-header">
+    <div class="user-content">
+      <div class="user-content user-content--logo">
+        <img src="/images/profile_at_hex.png">
       </div>
-    </nav>
-    <header>
-      <div class="user-content">
-        <div class="user-content user-content--logo">
-            <img src="/images/profile_at_hex.png">
-        </div>
-        <br>
-        <div>
-            <p><strong>Alex</strong>&nbsp;Tamayo</p>
-        </div>
+      <br>
+      <div>
+        <p><strong>Alex</strong>&nbsp;Tamayo</p>
       </div>
+    </div>
   </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form action="/tweets" method="POST">
-          <textarea name="text" id="tweet-text" placeholder="Whatchu talking bout, Willis?"></textarea>
-          <div class="post-info">
-            <button type="submit" class="button"><span>Tweet</span></button> 
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-    </main>
-  </body>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <form id="tweet-form" action="/tweets" method="POST">
+        <textarea name="text" id="tweet-text" placeholder="Whatchu talking bout, Willis?"></textarea>
+        <div class="post-info">
+          <button type="submit" class="button"><span>Tweet</span></button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+    <div id="tweets-container">
+  </div>
+    <hr class="hr-bottom">
+  </main>
+</body>
+
 </html>

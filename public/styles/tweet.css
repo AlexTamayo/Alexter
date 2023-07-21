@@ -1,0 +1,111 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-container {
+  display: flex;
+  flex-direction: row;
+  font-size: large;
+  width: 90%;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.tweet-container:hover {
+  width: 91%;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+  /* box-shadow: 0 0 7px #ffffff33; */
+  transition: 0.5s;
+}
+
+hr {
+  width: 100%;
+  opacity: 30%;
+}
+
+.tweet-container-logo {
+  display: flex;
+  width: 8%;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 0.25em;
+
+}
+
+.tweet-container-logo img{
+  width: 3em;
+  height: 3em;
+}
+
+.tweet-container-main {
+  margin-left: 0.25em;
+  width: 100%;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.display-name {
+  font-weight: bold;
+  opacity: 100%;
+}
+
+.tweet-header div:not(.display-name){
+  margin-left: 0.3em;
+  opacity: 50%;
+}
+
+.tweet-text {
+  margin-top: 0.2em;
+}
+
+.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.8em;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  
+}
+
+.tweet-footer div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 1.5em;
+}
+
+.tweet-footer i{
+  opacity: 60%;
+  font-size: 100%;
+}
+
+.tweet-footer i:hover{
+  font-size: 125%;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.tweet-footer-reply i:hover {
+  color: #09f;
+  text-shadow: 0 0 7px #09f;
+}
+
+.tweet-footer-retweet i:hover {
+  color: #00d018;
+  text-shadow: 0 0 7px #00d018;
+}
+
+.tweet-footer-like i:hover {
+  color: #ff1c7f;
+  text-shadow: 0 0 7px #ff1c7f;
+}
+

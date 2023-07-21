@@ -1,4 +1,4 @@
-header {
+.user-profile-header {
   display: flex;
   height: 400px;
   width: 100%;
@@ -6,7 +6,7 @@ header {
   justify-content: center;
   /* background-image: url("../images/black-orchid.png"); */
   background-image: url("../images/classy-fabric.png");
-  background-color: #333;
+  background-color: #222;
 
 }
 
@@ -27,9 +27,9 @@ header {
 }
 
 .user-content--logo img {
-  width: 100%; /* Make the image fill the width of the parent div */
-  height: 100%; /* Make the image fill the height of the parent div */
-  object-fit: cover; /* Adjust how the image fits within the parent div */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 p {

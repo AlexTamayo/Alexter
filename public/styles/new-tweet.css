@@ -54,14 +54,14 @@ form {
   border: none;
   background-color: #C00;
   opacity: 75%;
-  height: 2em;
-  width: 4.5em;
+  height: 1.6em;
+  width: 4em;
   border-radius: 5%;
 }
 
 .button span {
   display: flex;
-  font-size: 0.8em;
+  font-size: 0.7em;
   align-items: center;
   justify-content: center;
 }
