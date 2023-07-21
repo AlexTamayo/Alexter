@@ -63,9 +63,7 @@
 
 @media only screen and (min-width: 1024px) {
   .user-profile-header {
-    /* position: relative; */
     float: left;
-    /* width: 33.3%; */
     height: 400px;
     width: 400px;
     margin: auto;
@@ -76,12 +74,9 @@
   }
 
   .user-profile-header-container {
-    /* display: flex; */
     width: 100%;
-    /* height: 100%; */
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
     transition: 0.2s;
     
   }

@@ -135,7 +135,7 @@ $(document).ready(() => {
       if (decodedText.length > 140) {
         console.log(decodedText.length);
         console.log(decodedText);
-        errorMessage('You exceeded maximum message length!');
+        errorMessage('You exceeded the maximum message length!');
         return;
       }
   
