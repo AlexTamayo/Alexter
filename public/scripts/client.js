@@ -16,6 +16,12 @@ $(document).ready(() => {
     return div.innerHTML;
   };
 
+  $('#new-tweet').click(function() {
+    $('.new-tweet').slideToggle('slow', function() {
+      $('#tweet-text').focus();
+    });
+  });
+
   const createTweetElement = (tweet) => {
 
     const $tweet = $(`
@@ -113,32 +119,36 @@ $(document).ready(() => {
   loadTweets();
 
   $('#tweet-form').submit(function(event) {
-    event.preventDefault();
-    const formData = $(this).serialize();
-    const tweetText = formData.substring(5).trim();
-
-    if (tweetText.length === 0) {
-      errorMessage('No tweet, you typed nothing...');
-      return;
-    }
     
-    if (tweetText.length > 140) {
-      errorMessage('You exceeded maximum message length!');
-      return;
-    }
-
-    console.log(formData);
-    
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: formData,
-      success: () => {
-        loadTweets();
-        $('#tweet-text').val('');
-      },
-      error: () => {}
-    })
+      event.preventDefault();
+      const formData = $(this).serialize();
+      const tweetText = formData.substring(5).trim();
+      const decodedText = decodeURIComponent(tweetText);
+  
+      if (decodedText.length === 0) {
+        console.log(decodedText.length);
+        console.log(decodedText);
+        errorMessage('No tweet, you typed nothing...');
+        return;
+      }
+      
+      if (decodedText.length > 140) {
+        console.log(decodedText.length);
+        console.log(decodedText);
+        errorMessage('You exceeded maximum message length!');
+        return;
+      }
+  
+      $.ajax({
+        method: 'POST',
+        url: '/tweets',
+        data: formData,
+        success: () => {
+          loadTweets();
+          $('#tweet-text').val('');
+        },
+        error: () => {}
+      })
   });
 
 })
