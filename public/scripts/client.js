@@ -77,11 +77,11 @@ $(document).ready(() => {
     const $container = $('#tweets-container');
     $container.empty();
 
-    for(const tweet of tweets) {
+    for (const tweet of tweets) {
 
       const $tweet = createTweetElement(tweet);
 
-      $container.prepend($tweet)
+      $container.prepend($tweet);
     }
   };
 
@@ -93,62 +93,62 @@ $(document).ready(() => {
       success: (tweetsData) => {
         renderTweets(tweetsData);
       }
-    })
+    });
 
   };
 
-  const errorMessage = function(message){
+  const errorMessage = function(message) {
     const $error = $('#error');
 
     $error.text(message);
-    
+
     $error.removeClass('invisible-error');
     $error.addClass('visible-error');
     $error.slideDown(500);
-    
-    setTimeout(() => { 
+
+    setTimeout(() => {
       $error.slideUp(500, () => {
         $error.removeClass('visible-error');
         $error.addClass('invisible-error');
         $error.text('');
       });
     }, 3000);
-    
-  }
+
+  };
 
   loadTweets();
 
   $('#tweet-form').submit(function(event) {
-    
-      event.preventDefault();
-      const formData = $(this).serialize();
-      const tweetText = formData.substring(5).trim();
-      const decodedText = decodeURIComponent(tweetText);
-  
-      if (decodedText.length === 0) {
-        console.log(decodedText.length);
-        console.log(decodedText);
-        errorMessage('No tweet, you typed nothing...');
-        return;
-      }
-      
-      if (decodedText.length > 140) {
-        console.log(decodedText.length);
-        console.log(decodedText);
-        errorMessage('You exceeded the maximum message length!');
-        return;
-      }
-  
-      $.ajax({
-        method: 'POST',
-        url: '/tweets',
-        data: formData,
-        success: () => {
-          loadTweets();
-          $('#tweet-text').val('');
-        },
-        error: () => {}
-      })
+
+    event.preventDefault();
+    const formData = $(this).serialize();
+    const tweetText = formData.substring(5).trim();
+    const decodedText = decodeURIComponent(tweetText);
+
+    if (decodedText.length === 0) {
+      console.log(decodedText.length);
+      console.log(decodedText);
+      errorMessage('No tweet, you typed nothing...');
+      return;
+    }
+
+    if (decodedText.length > 140) {
+      console.log(decodedText.length);
+      console.log(decodedText);
+      errorMessage('You exceeded the maximum message length!');
+      return;
+    }
+
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: formData,
+      success: () => {
+        loadTweets();
+        $('#tweet-text').val('');
+      },
+      error: () => { }
+    });
   });
 
-})
+});

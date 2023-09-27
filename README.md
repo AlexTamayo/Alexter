@@ -1,27 +1,43 @@
 # Alexter Project
 
-Alexter is a simple, single-page Twitter clone.
+## Overview
+Alexter is a simplified, single-page application designed to emulate Twitter's basic functionalities. This project serves as a learning scaffold for students who wish to hone their skills in HTML, CSS, JavaScript, jQuery, and AJAX on the front-end, as well as Node.js and Express on the back-end.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Table of Contents
+- [Overview](#overview)
+- [Screenshots](#screenshots)
+- [Dependencies](#dependencies)
 
-## Screenshots
+## Media
 
-![desktop initial page](./docs/initial-page.png)
-![over character limit](./docs/over-limit.png)
-![over character limit error](./docs/over-limit-error.png)
-![posted new tweet](./docs/posted-new-tweet.png)
-![hidden post bar](./docs/hidden-post.png)
-![responsive design](./docs/responsive-design.png)
+Visuals are worth a thousand words. Below are some screenshots illustrating various features of Alexter:
 
-## Getting Started
+- **Desktop Initial Page**
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:3000/>.
-4. Go to <http://localhost:3000/> in your browser.
+  ![Desktop initial page](./docs/initial-page.png)
+
+- **Over Character Limit**
+
+  ![Over character limit](./docs/over-limit.png)
+
+- **Character Limit Error Message**
+
+  ![Over character limit error](./docs/over-limit-error.png)
+
+- **Posted New Tweet**
+
+  ![Posted new tweet](./docs/posted-new-tweet.png)
+
+- **Hidden Post Bar**
+
+  ![Hidden post bar](./docs/hidden-post.png)
+
+- **Responsive Design**
+
+  ![Responsive design](./docs/responsive-design.png)
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+- Express: For building the web application's server-side logic
+- Node.js: v5.10.x or above for executing JavaScript on the server
+
