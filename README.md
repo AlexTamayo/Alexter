@@ -5,12 +5,16 @@ Alexter is a simplified, single-page application designed to emulate Twitter's b
 
 ## Table of Contents
 - [Overview](#overview)
-- [Screenshots](#screenshots)
+- [Media](#media)
 - [Dependencies](#dependencies)
 
 ## Media
 
 Visuals are worth a thousand words. Below are some screenshots illustrating various features of Alexter:
+
+- **Video**
+
+  https://github.com/AlexTamayo/Alexter/assets/3316856/447dcc09-b168-431b-b5b8-c21a46723eec
 
 - **Desktop Initial Page**
 
